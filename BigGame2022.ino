@@ -1768,7 +1768,7 @@ int RunSelfTest(int curState, boolean curStateChanged) {
           break;
 
         case MACHINE_STATE_ADJUST_MAX_CARDS_LIT_DECREASES:
-          CurrentAdjustmentByte = (byte *)&LiberalClearRule;
+          CurrentAdjustmentByte = (byte *)&MaxCardsAffectedByLevel;
           CurrentAdjustmentStorageByte = EEPROM_MAX_CARDS_DECREASES;
           break;
 
