@@ -372,6 +372,7 @@ boolean AudioHandler::StopSound(unsigned short soundIndex) {
 }
 
 boolean AudioHandler::StopAllMusic() {
+  curSoundtrack = NULL;
 #if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
   if (currentBackgroundTrack!=BACKGROUND_TRACK_NONE) {
     wTrig.trackStop(currentBackgroundTrack);
@@ -380,7 +381,6 @@ boolean AudioHandler::StopAllMusic() {
   }
 #endif
   currentBackgroundTrack = BACKGROUND_TRACK_NONE;
-  curSoundtrack = NULL;
   return false;
 }
 
